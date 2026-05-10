@@ -1,10 +1,10 @@
 const CACHE_NAME = 'retro-clock-v1';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/manifest.json',
-  '/icon.png',
-  '/icon-maskable.png'
+  '/reloj-xs/',
+  '/reloj-xs/index.html',
+  '/reloj-xs/manifest.json',
+  '/reloj-xs/icon.png',
+  '/reloj-xs/icon-maskable.png'
 ];
 
 // Instalar el Service Worker y cachear archivos
@@ -57,7 +57,7 @@ self.addEventListener('fetch', event => {
         });
       })
       .catch(() => {
-        return caches.match('/index.html');
+        return caches.match('/reloj-xs/index.html');
       })
   );
 });
